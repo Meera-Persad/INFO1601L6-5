@@ -32,7 +32,7 @@
 
      </pre>
      <script>
-
+        //takes an array
        function drawTable(records){
           let result = document.querySelector('#result');
           //add html code inside of result
@@ -48,7 +48,9 @@
           }
           result.innerHTML = html;//add html string to DOM
       }
-
+      //takes a single record and shows a state, country and phone. it is attached to the last half of the page, after the table
+      //it accessing the properties in the record
+      
       function drawDetails(record){
         const section = document.querySelector('#details');
         // details.innerHTML = `${JSON.stringify(record, null, 2)}`;
@@ -59,6 +61,7 @@
         </ul>`;
       }
 
+      //getData is a higher orderfunction-it receives a callback func:renderFunc which receives the result and does someting with the result
       //function MUST be declared async
       async function getData(url, renderFun){
         try{
